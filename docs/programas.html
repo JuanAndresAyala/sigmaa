@@ -24,7 +24,7 @@
   </head>
   <body class="app sidebar-mini">
     <!-- Navbar-->
-    <header class="app-header"><a class="app-header__logo" href="index.html">SIGMA SOFT</a>
+    <header class="app-header"><a class="app-header__logo" href="dashboard.html">SIGMA SOFT</a>
       <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
       <!-- Navbar Right Menu-->
       <ul class="app-nav">
@@ -93,7 +93,7 @@
         </li>
 
         
-        <li><a class="app-menu__item" href=".//programas.html" data-toggle=><i class="app-menu__icon bi bi-motherboard"></i><span class="app-menu__label">Programas</span><i class=></i></a>
+        <li><a class="app-menu__item" href=".//programas.html" data-toggle=><i class="app-menu__icon bi bi-list-check"></i><span class="app-menu__label">Programas</span><i class=></i></a>
         
         </li>
 
@@ -112,11 +112,11 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="bi bi-journals"></i> Programas</h1>
+          <h1> <i class="bi bi-list-check"></i></i> Programas</h1>
           <p>Sistema de Informacion y Gestion de Modulos Academicos </p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
-          <li class="breadcrumb-item"><i class="bi bi-house-door fs-6"></i></li>
+          <li class="breadcrumb-item"> <i class="bi bi-list-check"></i>
           <li class="breadcrumb-item"><a href="#">Programas</a></li>
         </ul>
       </div>
@@ -131,23 +131,30 @@
                   <table class="table table-hover table-bordered" id="sampleTable">
                     <thead>
                       <tr>
-                        <th>Nombres</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
+                        <th>Nivel</th>
+                        <th>Nombre del Programa</th>
+                        <th>Ficha</th>
+                        <th>Instructor Lider</th>
+                        <th>Acciones</th>
+                    
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                      </tr>
+                        <td>Tecnivo</td>
+                        <td>Programacion de Sotfware</td>
+                        <td>2875079</td>
+                        <td>Jose Ramos</td>
+                        
+                          
+                        <td><div class="btn-group"><a class="btn btn-info" href="#"> <i class="bi bi-info-circle fs-4"></i></a><a class="btn btn-warning" href="#"><i class="bi bi-pencil-square fs-5"></i></a><a class="btn btn-danger" href="#"><i class="bi bi-trash fs-5"></i></a></div></td>
+                     
+                     
+  
+
+
+
+
+
                    
                   </table>
                 </div>
@@ -164,76 +171,23 @@
         </div>
       </div>
     </main>
-    <!-- Essential javascripts for application to work-->
+      <!-- Page specific javascripts-->
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css">
+      <!-- Data table plugin-->
+      <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
+      <script type="text/javascript">$('#sampleTable').DataTable();</script>
+    
+       <!-- Essential javascripts for application to work-->
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <!-- Page specific javascripts-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-    <script type="text/javascript">
-      const salesData = {
-      	xAxis: {
-      		type: 'category',
-      		data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-      	},
-      	yAxis: {
-      		type: 'value',
-      		axisLabel: {
-      			formatter: '${value}'
-      		}
-      	},
-      	series: [
-      		{
-      			data: [150, 230, 224, 218, 135, 147, 260],
-      			type: 'line',
-      			smooth: true
-      		}
-      	],
-      	tooltip: {
-      		trigger: 'axis',
-      		formatter: "<b>{b0}:</b> ${c0}"
-      	}
-      }
-      
-      const supportRequests = {
-      	tooltip: {
-      		trigger: 'item'
-      	},
-      	legend: {
-      		orient: 'vertical',
-      		left: 'left'
-      	},
-      	series: [
-      		{
-      			name: 'Support Requests',
-      			type: 'pie',
-      			radius: '50%',
-      			data: [
-      				{ value: 300, name: 'In Progress' },
-      				{ value: 50, name: 'Delayed' },
-      				{ value: 100, name: 'Complete' }
-      			],
-      			emphasis: {
-      				itemStyle: {
-      					shadowBlur: 10,
-      					shadowOffsetX: 0,
-      					shadowColor: 'rgba(0, 0, 0, 0.5)'
-      				}
-      			}
-      		}
-      	]
-      };
-      
-      const salesChartElement = document.getElementById('salesChart');
-      const salesChart = echarts.init(salesChartElement, null, { renderer: 'svg' });
-      salesChart.setOption(salesData);
-      new ResizeObserver(() => salesChart.resize()).observe(salesChartElement);
-      
-      const supportChartElement = document.getElementById("supportRequestChart")
-      const supportChart = echarts.init(supportChartElement, null, { renderer: 'svg' });
-      supportChart.setOption(supportRequests);
-      new ResizeObserver(() => supportChart.resize()).observe(supportChartElement);
-    </script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css">
+    <!-- Data table plugin-->
+    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">$('#sampleTable').DataTable();</script>
     <!-- Google analytics script-->
     <script type="text/javascript">
       if(document.location.hostname == 'pratikborsadiya.in') {
