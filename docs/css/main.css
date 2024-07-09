@@ -14106,7 +14106,7 @@ textarea.form-control-lg {
 
 .material-half-bg {
   height: 100vh;
-  background-color: white;
+  background-color: #30A900;
   position: fixed;
   top: 0;
   left: 0;
@@ -14115,7 +14115,7 @@ textarea.form-control-lg {
   z-index: -1;
 }
 .material-half-bg .cover {
-  background-color:#39A900;
+  background-color:#ffffff;
   height: 50vh;
 }
 
@@ -14591,7 +14591,7 @@ textarea.form-control-lg {
   text-align: center;
 }
 .login-content .login-box label {
-  color: #666;
+  color: black;
   font-weight: 700;
 }
 .login-content .login-box .utility {
